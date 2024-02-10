@@ -1,24 +1,10 @@
 function skillsMember() {
-    var member = document.getElementById("member");
-    var skills = document.getElementById("skills");
-    var projects = document.getElementById("projects");
-    var contact = document.getElementById("contact");
-    var about = document.getElementById("about");
-    var home = document.getElementById("home");
-    var memberSkills = document.getElementById("memberSkills");
-    var memberProjects = document.getElementById("memberProjects");
-    var memberContact = document.getElementById("memberContact");
-    var memberAbout = document.getElementById("memberAbout");
-    var memberHome = document.getElementById("memberHome");
-    member.style.display = "block";
-    skills.style.display = "none";
-    projects.style.display = "none";
-    contact.style.display = "none";
-    about.style.display = "none";
-    home.style.display = "none";
-    memberSkills.style.display = "none";
-    memberProjects.style.display = "none";
-    memberContact.style.display = "none";
-    memberAbout.style.display = "none";
-    memberHome.style.display = "block";
-} 
+    // 1. Get the skills from the form
+    var skills = document.getElementById("skills").value;
+    // 2. Split the skills into an array
+    var skillsArray = skills.split(",");
+    // 3. Sort the skills alphabetically
+    skillsArray.sort();
+    // 4. Display the skills in alphabetical order
+    document.getElementById("skills").value = skillsArray.join(",");
+}
